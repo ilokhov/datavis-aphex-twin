@@ -88,27 +88,21 @@ svg {
 }
 .bin.saw85-92 {
   fill: rgb(4, 4, 4);
-  stroke: rgb(39, 39, 39);
 }
 .bin.saw2 {
   fill: rgb(141, 107, 62);
-  stroke: rgb(179, 145, 100);
 }
 .bin.icbyd {
   fill: rgb(249, 210, 135);
-  stroke: rgb(255, 233, 189);
 }
 .bin.rdj {
   fill: rgb(168, 101, 73);
-  stroke: rgb(189, 130, 106);
 }
 .bin.drukqs {
   fill: rgb(68, 35, 22);
-  stroke: rgb(95, 60, 46);
 }
 .bin.syro {
   fill: rgb(191, 214, 48);
-  stroke: rgb(212, 234, 72);
 }
 .bin.active {
   opacity: 0.1;

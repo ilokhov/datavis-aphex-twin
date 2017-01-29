@@ -33,7 +33,7 @@ function main(tracks, albums) {
 
   // preload images
   Object.keys(albums).forEach(function(key) {
-    (new Image()).src = "../img/" + key + ".jpg";
+    (new Image()).src = "/../img/" + key + ".jpg";
   });
 
 
