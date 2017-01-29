@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evolution of the Aphex Twin sound</title>
+    <meta name="viewport" content="width=1260">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <main>
+        <h1>Evolution of the Aphex Twin sound</h1>
+        <div class="chart-container">
+          <div id="chart"></div>
+          <div id="chart-info">
+            <div class="button-update-container">
+              <button id="db" class="button-update button-update-active">Average loudness</button>
+              <button id="bpm" class="button-update">Tempo</button>
+            </div>
+            <div class="button-shift-container">
+              <button id="left" class="button-shift"><img src="img/left.svg" width="32" height="32"></button>
+              <button id="right" class="button-shift"><img src="img/right.svg" width="32" height="32"></button>
+            </div>
+            <div class="album-track-info">
+              <div id="album-cover"></div>
+              <div class="album-info">
+                <div id="album-title"></div>
+                <div id="album-year"></div>
+              </div>
+              <div class="track-info">
+                <div id="track-title"></div>
+                <div id="track-length"></div>
+                <div class="track-stats">
+                  <div class="track-db-container">Average loudness: <span id="track-db"></span></div>
+                  <div class="track-bpm-container">Tempo: <span id="track-bpm"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="text">
+          <h2>Description</h2>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Aphex_Twin">Aphex Twin</a> is the stage name of Richard D. James, an electronic musician and composer who has been releasing music for over 25 years. Working in a multitude of styles, he was at the epicentre of the so-called IDM (intelligent dance music) genre in the 90s and continues to release music today. His work stretches from ambient drone to acid techno and from minimal classicism to drill 'n' bass, with these diverse genres sometimes being blended on a single album or even in the same track. Considering the variation in the music that he has produced, I thought it would be interesting to see how the Aphex Twin sound has evolved throughout the years by visualising it.
+          </p>
+          <p>
+            Richard D. James has an overwhelming amount of releases strewn across many pseudonyms (I counted <a href="https://www.discogs.com/artist/45-Aphex-Twin">18 aliases on Discogs</a>). These include singles, EPs, albums and compilations. Deciding on which releases to include in this visualisation was quite challenging. I thought that I should focus on the “core” releases to reflect the overall feel of his work and settled on using albums released under the most well-known pseudonym: Aphex Twin. Whether these albums reflect his most important work is debatable, but I feel that they provide a reasonable reflection of his discography.
+          </p>
+          <p>
+            Breaking down each album by track, I used two attributes in order to visualise sound: average volume and tempo. While it is difficult to describe and compare music visually, average volume and tempo are likely to show the intensity of each track and work well to visually distinguish one track from another. This visualisation is in no way meant to provide a serious statistical comparison, but I think it works well as a small piece of data art while simultaneously providing an insight into the variety of the Aphex Twin sound.
+          </p>
+          <p>
+            To measure average volume, the dB (decibel) RMS (root mean square) of each track was obtained using <a href="http://sox.sourceforge.net/">SoX</a>. SoX was also used to retrieve track lengths. Bash and Python scripts were then used to process this extracted data.
+          </p>
+          <p>
+            To measure tempo, <a href="https://www.beatunes.com/">beaTunes 4</a> was used to retrieve the BPM (beats per minute) of each track. For some tracks, the BPM determined by beaTunes was either twice as fast or only half of the value which seemed “right” for the track, so I adjusted those values by hand. Although beaTunes returned a BPM value for every track tested, there are certain tracks that do not have a noticeable tempo or beat at all, so BPM values for these were discarded. They appear as having a tempo value of n/a in the track information and are not visible when triggering the “tempo” view.
+          </p>
+          <p>
+            Finally, Google Sheets was used to compile, format and export the data.
+          </p>
+          <p>
+            The visualisation was implemented using <a href="https://d3js.org/">d3.js</a>.
+          </p>
+        </div>
+      </main>
+      <footer>
+        by <a href="http://ivanlokhov.com/">Ivan Lokhov</a> / <a href="https://github.com/ilokhov/datavis-aphex-twin">Source</a>
+      </footer>
+    </div>
+    <script src="js/d3.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

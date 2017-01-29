@@ -1,0 +1,244 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6,
+p, a, img, ol, ul, li,
+form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+header, main, footer, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+	color: #2a2a2a;
+}
+h1 {
+  font-size: 2.5em;
+  line-height: 1.35;
+  font-weight: 400;
+  margin-bottom: 1.25em;
+}
+h2 {
+  font-size: 1.8em;
+  line-height: 1.35;
+  font-weight: 400;
+  margin: 2em 0 0.5em;
+}
+p {
+  line-height: 1.5;
+  margin: 1em 0;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+main {
+  margin: 2em 0 4em;
+}
+button {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 0.85em;
+	-webkit-appearance: none;
+	background: transparent;
+	border: 0;
+  padding: 0;
+	text-align: left;
+	cursor: pointer;
+	color: #2a2a2a;
+}
+button:focus {
+	outline: 0;
+}
+.chart-container {
+  margin: 0 -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#chart {
+	width: 1040px;
+}
+svg {
+	display: block;
+}
+.bin {
+	shape-rendering: crispEdges;
+  stroke-width: 0;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+.bin.saw85-92 {
+  fill: rgb(4, 4, 4);
+  stroke: rgb(39, 39, 39);
+}
+.bin.saw2 {
+  fill: rgb(141, 107, 62);
+  stroke: rgb(179, 145, 100);
+}
+.bin.icbyd {
+  fill: rgb(249, 210, 135);
+  stroke: rgb(255, 233, 189);
+}
+.bin.rdj {
+  fill: rgb(168, 101, 73);
+  stroke: rgb(189, 130, 106);
+}
+.bin.drukqs {
+  fill: rgb(68, 35, 22);
+  stroke: rgb(95, 60, 46);
+}
+.bin.syro {
+  fill: rgb(191, 214, 48);
+  stroke: rgb(212, 234, 72);
+}
+.bin.active {
+  opacity: 0.1;
+}
+.axis {
+  opacity: 1;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.axis.hidden {
+  opacity: 0;
+}
+.axis .domain {
+  stroke: #fff;
+}
+.axis .tick line {
+  shape-rendering: crispEdges;
+  fill: #2a2a2a;
+}
+.axis .tick line {
+  fill: #2a2a2a;
+}
+.axis .label {
+  fill: #2a2a2a;
+  text-anchor: start;
+}
+#chart-info {
+  width: 200px;
+  margin: 20px 0;
+  position: relative;
+}
+.button-update-container {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+.button-update {
+  padding: 0 0 0 12px;
+  display: block;
+  position: relative;
+}
+.button-update::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #2a2a2a;
+}
+.button-update.button-update-active::before {
+  background: #2a2a2a;
+}
+.button-shift-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.button-shift {
+  font-size: 0;
+}
+#album-cover {
+  background: #eee no-repeat;
+  background-size: 100%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0.5em;
+}
+#album-cover.saw85-92 {
+  background-image: url('../img/saw85-92.jpg');
+}
+#album-cover.saw2 {
+  background-image: url('../img/saw2.jpg');
+}
+#album-cover.icbyd {
+  background-image: url('../img/icbyd.jpg');
+}
+#album-cover.rdj {
+  background-image: url('../img/rdj.jpg');
+}
+#album-cover.drukqs {
+  background-image: url('../img/drukqs.jpg');
+}
+#album-cover.syro {
+  background-image: url('../img/syro.jpg');
+}
+.album-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5.5em;
+  font-size: 0.8em;
+}
+#album-title {
+  width: 80%;
+  padding-right: 10px;
+  height: 24px;
+}
+#album-year {
+  width: 20%;
+  text-align: right;
+}
+#track-title {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+#track-length {
+  margin-bottom: 0.5em;
+}
+.track-stats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.track-db-container,
+.track-bpm-container {
+  font-size: 0.85em;
+}
+#track-db,
+#track-bpm {
+  float: right;
+}
+#text {
+  max-width: 700px;
+}
+footer {
+  margin: 2em 0;
+}

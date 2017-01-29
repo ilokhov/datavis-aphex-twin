@@ -1,0 +1,32 @@
+{
+	"saw85-92": {
+		"colour": "rgb(4, 4, 4)",
+		"title": "Selected Ambient Works 85-92",
+		"year": 1992
+	},
+	"saw2": {
+		"colour": "rgb(141, 107, 62)",
+		"title": "Selected Ambient Works Volume II",
+		"year": 1994
+	},
+	"icbyd": {
+		"colour": "rgb(249, 210, 135)",
+		"title": "...I Care Because You Do",
+		"year": 1995
+	},
+	"rdj": {
+		"colour": "rgb(168, 101, 73)",
+		"title": "Richard D. James Album",
+		"year": 1996
+	},
+	"drukqs": {
+		"colour": "rgb(68, 35, 22)",
+		"title": "Drukqs",
+		"year": 2001
+	},
+	"syro": {
+		"colour": "rgb(191, 214, 48)",
+		"title": "Syro",
+		"year": 2014
+	}
+}
