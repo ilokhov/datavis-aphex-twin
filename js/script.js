@@ -112,23 +112,23 @@ function main(tracks, albums) {
   var yAxisDb = d3.axisLeft(yScaleDb).ticks(4).tickFormat(function(d) { return "-" + d; });
   chart.append("g")
         .attr("class", "axis axis-db")
-        .attr("transform", "translate(-5,0)")
+        .attr("transform", "translate(-2,0)")
         .call(yAxisDb)
        .append("text")
         .attr("class", "label")
         .attr("y", -10)
-        .attr("x", 5)
+        .attr("x", 4)
         .text("dB");
 
   var yAxisBpm = d3.axisLeft(yScaleBpm).ticks(2);
   chart.append("g")
         .attr("class", "axis axis-bpm hidden")
-        .attr("transform", "translate(-5,0)")
+        .attr("transform", "translate(-2,0)")
         .call(yAxisBpm)
        .append("text")
         .attr("class", "label")
         .attr("y", -10)
-        .attr("x", 5)
+        .attr("x", 4)
         .text("BPM");
 
 
